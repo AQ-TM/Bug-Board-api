@@ -12,7 +12,7 @@ const projectSchema = new mongoose.Schema({
   targetEndDate: {
     type: Date
   },
-  issues: [issueSchema],
+  issues: [ { issueSchema } ],
   owner: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User',

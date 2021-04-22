@@ -9,6 +9,9 @@ const issueSchema = new mongoose.Schema({
     ref: 'User',
     required: true
   },
+  username: {
+    type: String
+  },
   identifiedDate: {
     type: Date,
     default: Date.now
