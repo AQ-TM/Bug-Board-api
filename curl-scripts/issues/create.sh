@@ -10,8 +10,8 @@ curl "http://localhost:4741/projects/${ID}/issues" \
       "summary": "'"${SUM}"'",
       "identifiedDate": "'"${IDD}"'",
       "targetResolutionDate": "'"${TRD}"'",
-      "resolutionSummary:": "'"${RS}"'",
-      "status:": "'"${STAT}"'"
+      "resolutionSummary": "'"${RS}"'",
+      "status": "'"${STAT}"'"
     }
   }'
 
