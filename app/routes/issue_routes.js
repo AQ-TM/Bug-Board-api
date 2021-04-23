@@ -30,10 +30,9 @@ const router = express.Router()
 router.post('/projects/:id/issues', requireToken, (req, res, next) => {
   const issueData = req.body.issue
   issueData.username = req.user.username
-  console.log('req.params.id')
+  console.log(issueData)
   Project.findById(req.params.id)
     .then(handle404)
-    .then(project => console.log('this is project: ', project))
     .then(project => {
       project.issues.push({ issueData })
       return project.save()
