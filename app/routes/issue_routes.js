@@ -43,7 +43,7 @@ router.post('/projects/:id/issues', requireToken, (req, res, next) => {
 
 // SHOW
 // GET /examples/5a7db6c74d55bc51bdf39793
-router.get('/issues/:id', (req, res, next) => {
+router.get('projects/:id/issues/:id2', (req, res, next) => {
   // req.params.id will be set based on the `:id` in the route
   Project.findById(req.params.id)
     .then(handle404)
