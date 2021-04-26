@@ -4,13 +4,9 @@ const issueSchema = new mongoose.Schema({
   summary: {
     type: String
   },
-  identifiedBy: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'User',
-    required: true
-  },
   username: {
-    type: String
+    type: String,
+    unique: true
   },
   identifiedDate: {
     type: Date,
