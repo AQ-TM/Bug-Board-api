@@ -34,7 +34,7 @@ router.post('/projects/:id/issues', requireToken, (req, res, next) => {
   Project.findById(req.params.id)
     .then(handle404)
     .then(project => {
-      project.issues.push({ issueData })
+      project.issues.push(issueData)
       return project.save()
     })
     .then(project => res.status(201).json({ project }))
