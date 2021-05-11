@@ -58,10 +58,10 @@ router.get('/projects/:id/view-issues', (req, res, next) => {
   const projectId = req.params.id
   Project.findById(projectId)
     .then(handle404)
-    // .then(comments => {
-    //   return comments.map(comment => comment.toObject())
-    // })
-    .then(project => res.status(200).json({ issues: project.issues.toObject() }))
+    .then(issues => {
+      return issues.map(issue => issue.toObject())
+    })
+    // .then(project => res.status(200).json({ issues: project.issues.toObject() }))
     .catch(next)
 })
 
